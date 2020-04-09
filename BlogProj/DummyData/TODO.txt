@@ -17,4 +17,6 @@ Create AddPost view
 
 Create AddRecipe view
 
-On sidebar add links to social media
+On sidebar add dummy links to social media
+
+Add hamburger btn to navbar

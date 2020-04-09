@@ -1,36 +1,38 @@
 ﻿@model Post
 
-<h2>Add a new post by filling in the fields below!</h2>
+    <div class="container justify-content-center">
+        <h2>Add a new post by filling in the fields below!</h2>
 
-<form asp-action="PostAdded" method="post" enctype="multipart/form-data" class="form-group" role="form">
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <input type="hidden" asp-for="Id" />
-    <input type="hidden" asp-for="DatePosted" value="@DateTimeOffset.UtcNow" />
+        <form asp-action="PostAdded" method="post" enctype="multipart/form-data" class="form-group" role="form">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="DatePosted" value="@DateTimeOffset.UtcNow" />
 
-    <div class="form-group">
-        <label asp-for="Title"></label>
-        <div>
-            <input asp-for="Title" class="form-control" />
-            <span asp-validation-for="Title" class="text-danger"></span>
-        </div>>
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <div>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <div>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RecipeImageUpload"></label>
+                <div>
+                    <input style="border: none; outline: none" asp-for="RecipeImageUpload" class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Create Post" asp-controller="Post" asp-action="PostAdded" />
+            </div>
+        </form>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <div>
-            <input asp-for="Description" class="form-control" />
-            <span asp-validation-for="Description" class="text-danger"></span>
-        </div>>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="RecipeImageUpload"></label>
-        <div>
-            <input asp-for="RecipeImageUpload" class="form-control" />
-        </div>
-    </div>
-
-    <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Create Post" asp-controller="Post" asp-action="PostAdded" />
-    </div>
-</form>
