@@ -1,0 +1,26 @@
+﻿
+/*nav-bar*/
+.navbar-light {
+    background-color: lightblue;
+}
+
+.navbar-nav .dropdown-divider {
+    border-color: mediumpurple;
+}
+
+/*Home page*/
+
+#homeTitle {
+    text-align: center;
+    color: purple;
+    padding-top: 1em;
+    /*font-size: 24px;*/
+}
+
+#homeIntro {
+    text-align: center;
+}
+
+.postList {
+    text-align: center;
+}

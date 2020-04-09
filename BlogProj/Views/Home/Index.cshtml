@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Post>
+
+<div class="container">
+    <h1 id="homeTitle">Amanda's Blog!</h1>
+</div>
+ 
+<div id="homeIntro" class="container">
+    <p>Hello, and welcome to my Blog!</p> 
+</div>
+<hr style="border-color: mediumpurple"/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-9" style="background-color: lightcoral">
+            @foreach (var post in Model)
+            {
+
+               
+                @*<div class="container">
+                    <h6 class="justify-content-start">@post.DatePosted.UtcDateTime</h6>
+                    <h4 class="text-center">@post.Title</h4>
+                    <a src="@post.ImageSource" alt="@post.Title"></a>
+                    <p class="text-center">@post.Description</p>
+                </div>*@
+                <partial name="_PostCard" model="post" />
+                <hr style="border-color: mediumpurple" />
+            }
+        </div>
+        <div class="col-3" style="background-color: lightgreen">
+            Hi, I'm Amanda! <br />
+            Insert image here
+            <p>Descriptive info about author..</p>
+        </div>
+    </div>
+</div>

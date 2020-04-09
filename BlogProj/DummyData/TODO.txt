@@ -1,0 +1,20 @@
+﻿Get post enumeration to work on Index page -X
+
+Implement partial view for post enumerations -X
+
+Create AddPostController - or just PostController -X
+
+Create AddRecipeController - or just RecipeController -X
+
+Post class needs to have added member 'RecipeLink'
+
+Create Recipe class -X
+
+Create ViewRecipe view
+
+Create AddPost view
+	Needs validation -- still not working
+
+Create AddRecipe view
+
+On sidebar add links to social media
